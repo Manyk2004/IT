@@ -42,9 +42,9 @@ public class Main {
         System.out.println(gcd(259, 28));
         System.out.println();
 
-        System.out.println(ticketSaler(70, 1500));
-        System.out.println(ticketSaler(24, 950));
-        System.out.println(ticketSaler(53, 1250));
+        System.out.println(ticketSailer(70, 1500));
+        System.out.println(ticketSailer(24, 950));
+        System.out.println(ticketSailer(53, 1250));
         System.out.println();
 
         System.out.println(tables(5, 2));
@@ -52,9 +52,8 @@ public class Main {
         System.out.println(tables(123, 58));
         System.out.println();
     }
-    public static String convert(int x){
-        String a = String.format("%.4f", x* 3.785);
-        return a;
+    public static double convert(int x){
+        return x * 3.785d;
     }
 
     public static int fitCalc(int x, int y){
@@ -68,10 +67,10 @@ public class Main {
     public static String triangleType(int x, int y, int w){
         if ((x + y >= w) && (x + w >= y) && (y + w >= x)){
             if ((x == y) && (x == w)){
-                return "isosceles";
+                return "equilateral";
             }
             else if ((x == y) || (x == w) || (y == w)){
-                return "equilateral";
+                return "isosceles";
             }
             else {
                 return "different-sided";
@@ -85,8 +84,7 @@ public class Main {
     }
 
     public static double howManyItems(float x, float y, float w){
-        double res = Math.floor(x / (y * w * 2));
-        return res;
+        return Math.floor(x / (y * w * 2));
     }
 
     public static int factorial(int x){
@@ -108,7 +106,7 @@ public class Main {
         return gcd;
     }
 
-    public static int ticketSaler(int x, int y){
+    public static int ticketSailer(int x, int y){
         return x * y / 25 * 18;
     }
 
